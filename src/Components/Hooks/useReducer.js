@@ -1,0 +1,42 @@
+import React, { useReducer } from 'react';
+import './useState.css';
+
+const initialState = { count: 0 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count > 0 ? state.count - 1 : 0 };
+    default:
+      return state;
+  }
+};
+
+const UseReducer = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const increment = () => dispatch({ type: 'increment' });
+  const decrement = () => dispatch({ type: 'decrement' });
+
+  return (
+    <section className="counter-page">
+      <div className="counter-wrapper">
+        <h1 className="counter-title">my menu </h1>
+        <p className="counter-value">{state.count}</p>
+
+        <div className="counter-actions">
+          <button type="button" className="counter-btn counter-btn--primary" onClick={increment}>
+            INCR
+          </button>
+          <button type="button" className="counter-btn counter-btn--ghost" onClick={decrement}>
+            DECR
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default UseReducer;

@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #f4f3eb;
+}
+
+.navbar {
+  width: min(760px, 92%);
+  margin: 2.2rem auto 1.2rem;
+  background: #ecebe2;
+  border-radius: 6px;
+  padding: 0 0.5rem;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn-group__item {
+  border: none;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #1f1f1f;
+  padding: 0.95rem 0.5rem 0.75rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.btn-group__item--active {
+  border-bottom-color: #714fdd;
+}
+
+.btn-group__item:hover {
+  border-bottom-color: #714fdd;
+}
+
+.main-card--container {
+  width: min(1000px, 92%);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6d6d6d;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  padding: 1rem;
+}
+
+.card-container {
+  background: #ffffff;
+  padding: 0.9rem;
+  border: 1px solid #ececec;
+}
+
+.card {
+  border: 1px solid #ececec;
+  padding: 0.9rem;
+}
+
+.card-body {
+  margin-bottom: 0.7rem;
+}
+
+.card-number {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: #9c9c9c;
+}
+
+.card-author {
+  margin-top: 0.55rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #a7a7a7;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.card-title {
+  margin: 0.4rem 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #1f1f1f;
+  text-transform: capitalize;
+}
+
+.card-description {
+  display: block;
+  color: #8f8f8f;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.card-read {
+  margin-top: 0.6rem;
+  text-align: right;
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.card-media {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin-top: 0.65rem;
+}
+
+.card-tag {
+  display: inline-block;
+  margin-top: 0.65rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid #d8d8d8;
+  color: #9c9c9c;
+  font-size: 0.72rem;
+}
+
+.subtle {
+  color: #9c9c9c;
+}
+
+@media (max-width: 600px) {
+  .btn-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
