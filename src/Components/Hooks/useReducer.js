@@ -20,23 +20,7 @@ const UseReducer = () => {
   const increment = () => dispatch({ type: 'increment' });
   const decrement = () => dispatch({ type: 'decrement' });
 
-  return (
-    <section className="counter-page">
-      <div className="counter-wrapper">
-        <h1 className="counter-title">my menu </h1>
-        <p className="counter-value">{state.count}</p>
-
-        <div className="counter-actions">
-          <button type="button" className="counter-btn counter-btn--primary" onClick={increment}>
-            INCR
-          </button>
-          <button type="button" className="counter-btn counter-btn--ghost" onClick={decrement}>
-            DECR
-          </button>
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 };
 
 export default UseReducer;
