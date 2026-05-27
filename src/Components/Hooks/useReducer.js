@@ -15,7 +15,7 @@ const reducer = (state, action) => {
 };
 
 const UseReducer = () => {
-  const [, dispatch] = useReducer(reducer, initialState);
+  const [] = useReducer(reducer, initialState);
 
   return null;
 };
