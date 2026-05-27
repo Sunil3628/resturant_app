@@ -15,9 +15,34 @@ const reducer = (state, action) => {
 };
 
 const UseReducer = () => {
-  const [] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  return null;
+  return (
+    <section className="counter-page">
+      <div className="counter-wrapper">
+        <h1 className="counter-title">use reducer</h1>
+        <p className="counter-value">{state.count}</p>
+
+        <div className="counter-actions">
+          <button
+            type="button"
+            className="counter-btn counter-btn--primary"
+            onClick={() => dispatch({ type: 'increment' })}
+          >
+            INCR
+          </button>
+          <button
+            type="button"
+            className="counter-btn counter-btn--ghost"
+            onClick={() => dispatch({ type: 'decrement' })}
+            disabled={state.count <= 0}
+          >
+            DECR
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default UseReducer;
