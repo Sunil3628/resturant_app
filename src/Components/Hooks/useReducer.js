@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 import './useState.css';
 
 const initialState = { count: 0 };
@@ -15,10 +15,7 @@ const reducer = (state, action) => {
 };
 
 const UseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const increment = () => dispatch({ type: 'increment' });
-  const decrement = () => dispatch({ type: 'decrement' });
+  const [, dispatch] = useReducer(reducer, initialState);
 
   return null;
 };
